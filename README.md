@@ -14,3 +14,7 @@ We have to live in a fair world, therefore new that helps. must make an agreemen
 
 In addition, read the various commits. This will give you a better overview. 
 Maybe read from day 1
+https://github.com/www-object-social/Storytime-OBJECTSOCIAL-Claims/commits/
+
+I have lawyers and an accountant behind me.
+Let's collaborate instead
