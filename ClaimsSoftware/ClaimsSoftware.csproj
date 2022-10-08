@@ -13,7 +13,7 @@
         <EnableDefaultCssItems>false</EnableDefaultCssItems>
 
         <!-- Display name -->
-        <ApplicationTitle>ClaimsSoftware</ApplicationTitle>
+        <ApplicationTitle>Claims</ApplicationTitle>
 
         <!-- App Identifier -->
         <ApplicationId>social.object.claimssoftware</ApplicationId>
@@ -33,17 +33,7 @@
 
     <ItemGroup>
         <!-- App Icon -->
-        <MauiIcon Include="Resources\AppIcon\claims.svg" Color="#00000000" />
-
-        <!-- Splash Screen -->
-        <MauiSplashScreen Include="Resources\AppIcon\claims.svg" Color="#00000000" BaseSize="128,128" />
-
-        <!-- Images -->
-        <MauiImage Include="Resources\Images\*" />
-        <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
-        <!-- Custom Fonts -->
-        <MauiFont Include="Resources\Fonts\*" />
+        <MauiIcon Include="Resources\AppIcon\claims.svg" BaseSize="400,400" Color="#00000000" />
 
         <!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
         <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
@@ -51,6 +41,10 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0-rc.1.22426.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\Images\" />
     </ItemGroup>
 
 </Project>
