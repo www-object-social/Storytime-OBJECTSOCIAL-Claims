@@ -47,4 +47,8 @@
       <Folder Include="Resources\Images\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Claims\Claims.csproj" />
+    </ItemGroup>
+
 </Project>

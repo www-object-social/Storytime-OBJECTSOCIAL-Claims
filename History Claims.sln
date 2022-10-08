@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadClaimsWebsite.Server", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadClaimsWebsite.Client", "BadClaimsWebsite\Client\BadClaimsWebsite.Client.csproj", "{3BF374A9-A4F1-4BB1-8EDF-658B872CB5C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims", "Claims\Claims.csproj", "{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBJECTSOCIAL", "OBJECTSOCIAL\OBJECTSOCIAL.csproj", "{980890E2-8075-44B6-88D9-99F69FCA266B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,14 @@ Global
 		{3BF374A9-A4F1-4BB1-8EDF-658B872CB5C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF374A9-A4F1-4BB1-8EDF-658B872CB5C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF374A9-A4F1-4BB1-8EDF-658B872CB5C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980890E2-8075-44B6-88D9-99F69FCA266B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980890E2-8075-44B6-88D9-99F69FCA266B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980890E2-8075-44B6-88D9-99F69FCA266B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980890E2-8075-44B6-88D9-99F69FCA266B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
