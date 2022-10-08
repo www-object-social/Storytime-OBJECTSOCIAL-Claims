@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\MemoryClaimsWebsite.Client.csproj" />
-    <ProjectReference Include="..\Shared\MemoryClaimsWebsite.Shared.csproj" />
   </ItemGroup>
 
 

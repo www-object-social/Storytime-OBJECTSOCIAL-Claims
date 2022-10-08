@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\GoodClaimsWebsite.Client.csproj" />
-    <ProjectReference Include="..\Shared\GoodClaimsWebsite.Shared.csproj" />
   </ItemGroup>
 
 

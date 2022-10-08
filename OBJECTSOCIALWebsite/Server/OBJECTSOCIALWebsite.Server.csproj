@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\OBJECTSOCIALWebsite.Client.csproj" />
-    <ProjectReference Include="..\Shared\OBJECTSOCIALWebsite.Shared.csproj" />
   </ItemGroup>
 
 
