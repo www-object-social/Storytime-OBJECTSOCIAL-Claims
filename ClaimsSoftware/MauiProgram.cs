@@ -1,24 +1,19 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Claims;
+using Microsoft.Extensions.Logging;
 
-namespace ClaimsSoftware
+namespace ClaimsSoftware;
+public static class MauiProgram
 {
-    public static class MauiProgram
+    public static MauiApp CreateMauiApp()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>(); ;
-
-            builder.Services.AddMauiBlazorWebView();
-
+        var builder = MauiApp.CreateBuilder();
+        builder.UseMauiApp<App>(); ;
+        builder.Services.Claims(Shared.terminal.Software.ClaimsSoftware);
+        builder.Services.AddMauiBlazorWebView();
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
 #endif
-
-
-            return builder.Build();
-        }
+        return builder.Build();
     }
 }

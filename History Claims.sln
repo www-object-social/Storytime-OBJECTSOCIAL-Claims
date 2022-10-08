@@ -3,39 +3,41 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.32916.344
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsSoftware", "ClaimsSoftware\ClaimsSoftware.csproj", "{D6F47BB0-BE3B-456B-867B-280BFC8DC9F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClaimsSoftware", "ClaimsSoftware\ClaimsSoftware.csproj", "{D6F47BB0-BE3B-456B-867B-280BFC8DC9F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBJECTSOCIALSoftware", "OBJECTSOCIALSoftware\OBJECTSOCIALSoftware.csproj", "{4CF19BDD-8FC2-4920-9A74-997D624B2A99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBJECTSOCIALSoftware", "OBJECTSOCIALSoftware\OBJECTSOCIALSoftware.csproj", "{4CF19BDD-8FC2-4920-9A74-997D624B2A99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBJECTSOCIALWebsite.Server", "OBJECTSOCIALWebsite\Server\OBJECTSOCIALWebsite.Server.csproj", "{17776FF3-0C59-4952-8003-B89C79F64DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBJECTSOCIALWebsite.Server", "OBJECTSOCIALWebsite\Server\OBJECTSOCIALWebsite.Server.csproj", "{17776FF3-0C59-4952-8003-B89C79F64DE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBJECTSOCIALWebsite.Client", "OBJECTSOCIALWebsite\Client\OBJECTSOCIALWebsite.Client.csproj", "{3FD6813C-D469-4E84-8914-58FAA77DC3F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBJECTSOCIALWebsite.Client", "OBJECTSOCIALWebsite\Client\OBJECTSOCIALWebsite.Client.csproj", "{3FD6813C-D469-4E84-8914-58FAA77DC3F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{EC89BAF9-B9BB-4913-8172-B366CA30FA8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{98B3BF0E-6E4E-4C02-81A4-E0CD20D97028}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryClaimsWebsite.Server", "MemoryClaimsWebsite\Server\MemoryClaimsWebsite.Server.csproj", "{91E6F6C8-5EA8-433C-98F1-032598B67A2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClaimsWebsite.Server", "MemoryClaimsWebsite\Server\MemoryClaimsWebsite.Server.csproj", "{91E6F6C8-5EA8-433C-98F1-032598B67A2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryClaimsWebsite.Client", "MemoryClaimsWebsite\Client\MemoryClaimsWebsite.Client.csproj", "{224E4620-529E-4C5D-9ECA-1E8106892C21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemoryClaimsWebsite.Client", "MemoryClaimsWebsite\Client\MemoryClaimsWebsite.Client.csproj", "{224E4620-529E-4C5D-9ECA-1E8106892C21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodClaimsWebsite.Server", "GoodClaimsWebsite\Server\GoodClaimsWebsite.Server.csproj", "{40FD4857-0AD0-4ACA-8962-A7B79E9C1A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodClaimsWebsite.Server", "GoodClaimsWebsite\Server\GoodClaimsWebsite.Server.csproj", "{40FD4857-0AD0-4ACA-8962-A7B79E9C1A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodClaimsWebsite.Client", "GoodClaimsWebsite\Client\GoodClaimsWebsite.Client.csproj", "{CCF1312B-37EF-49B8-A966-48FD444B4ECA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodClaimsWebsite.Client", "GoodClaimsWebsite\Client\GoodClaimsWebsite.Client.csproj", "{CCF1312B-37EF-49B8-A966-48FD444B4ECA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadClaimsWebsite.Server", "BadClaimsWebsite\Server\BadClaimsWebsite.Server.csproj", "{DE57CA55-5E17-4AB9-A449-B52A487E055A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BadClaimsWebsite.Server", "BadClaimsWebsite\Server\BadClaimsWebsite.Server.csproj", "{DE57CA55-5E17-4AB9-A449-B52A487E055A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadClaimsWebsite.Client", "BadClaimsWebsite\Client\BadClaimsWebsite.Client.csproj", "{3BF374A9-A4F1-4BB1-8EDF-658B872CB5C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BadClaimsWebsite.Client", "BadClaimsWebsite\Client\BadClaimsWebsite.Client.csproj", "{3BF374A9-A4F1-4BB1-8EDF-658B872CB5C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims", "Claims\Claims.csproj", "{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Claims", "Claims\Claims.csproj", "{A8EC1375-DD5F-45D4-A98D-E287F1FAD007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBJECTSOCIAL", "OBJECTSOCIAL\OBJECTSOCIAL.csproj", "{980890E2-8075-44B6-88D9-99F69FCA266B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OBJECTSOCIAL", "OBJECTSOCIAL\OBJECTSOCIAL.csproj", "{980890E2-8075-44B6-88D9-99F69FCA266B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "private", "private", "{115F9CD4-E6C1-41D3-BDB8-3C67B05BC247}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "business", "business", "{1FD72588-F3F7-426F-9FA7-704540012E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{D71F1FF1-D0B1-4C00-BEF2-BBFBA59925E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{D71F1FF1-D0B1-4C00-BEF2-BBFBA59925E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OnlyForWebsiteClient", "OnlyForWebsiteClient", "{498B5E69-D96D-46EC-9F97-05689270F5AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
