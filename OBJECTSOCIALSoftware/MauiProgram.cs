@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using OBJECTSOCIALSoftware.Data;
-
 namespace OBJECTSOCIALSoftware
 {
     public static class MauiProgram
@@ -9,11 +7,7 @@ namespace OBJECTSOCIALSoftware
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
+                .UseMauiApp<App>();
 
             builder.Services.AddMauiBlazorWebView();
 
@@ -22,7 +16,6 @@ namespace OBJECTSOCIALSoftware
 		builder.Logging.AddDebug();
 #endif
 
-            builder.Services.AddSingleton<WeatherForecastService>();
 
             return builder.Build();
         }
