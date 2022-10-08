@@ -10,3 +10,7 @@ The company is called OBJECT:SOCIAL ApS
 DK38331175
 Hornevej 7
 2770 Kastrup
+We have to live in a fair world, therefore new that helps. must make an agreement with me. there are different agreements to be involved. Send an email and we'll talk about it.
+
+In addition, read the various commits. This will give you a better overview. 
+Maybe read from day 1
