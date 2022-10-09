@@ -9,10 +9,10 @@ namespace Claims
 {
     public static class Dependency
     {
-        public static void Claims(this IServiceCollection services,Shared.terminal.Software software) {
+        public static void Claims(this IServiceCollection services, Standard.terminal.Software software) {
             services.AddScoped(x => new Shared.Terminal
             {
-                Entrance = Shared.terminal.Entrance.Private,
+                Entrance = Standard.terminal.Entrance.Private,
                 Software = software
             });
         }

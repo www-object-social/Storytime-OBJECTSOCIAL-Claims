@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 namespace Shared;
 public class Terminal
 {
-    public terminal.Entrance Entrance { get; init; }
-    public terminal.Software Software { get; init; }
+    public Standard.terminal.Entrance Entrance { get; init; }
+    public Standard.terminal.Software Software { get; init; }
 }

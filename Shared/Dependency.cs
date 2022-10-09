@@ -9,8 +9,10 @@ namespace Shared
 {
     public static class Dependency
     {
-        public static void Shared(this IServiceCollection services) { 
-        
+        public static void Shared(this IServiceCollection services) {
+            //services.AddScoped<Terminal>()  
+            //services.AddScoped<IDevice>()
+
         }
     }
 }
