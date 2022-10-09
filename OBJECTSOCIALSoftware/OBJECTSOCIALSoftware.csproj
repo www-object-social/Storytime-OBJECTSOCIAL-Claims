@@ -45,6 +45,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\OBJECTSOCIAL\OBJECTSOCIAL.csproj" />
+      <ProjectReference Include="..\OnlyForMAUIClient\OnlyForMAUIClient.csproj" />
     </ItemGroup>
 
 </Project>

@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Claims\Claims.csproj" />
+    <ProjectReference Include="..\..\OnlyForWebsiteClient\OnlyForWebsiteClient.csproj" />
   </ItemGroup>
 
   <ItemGroup>
