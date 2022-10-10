@@ -12,7 +12,7 @@ namespace Shared
         public static void Shared(this IServiceCollection services) {
             //services.AddScoped<Terminal>()  
             //services.AddScoped<IDevice>()
-
+            services.AddScoped<Progress>();
         }
     }
 }

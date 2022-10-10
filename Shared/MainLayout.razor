@@ -1,15 +1,26 @@
 ﻿@inherits LayoutComponentBase
 @Body
+<img src="/_content/Shared/@(Terminal.Entrance is Standard.terminal.Entrance.Private?"Claims":"OBJECTSOCIAL").svg" class="logo" data-progress="@this.Progress.Status" />
 
+@Progress.Status
 @if (this.Device.Network is Standard.device.Network.Offline)
 {
     <object data="/_content/Shared/sad-cloud.svg" class="sad-cloud" />
 }
+@if (this.Progress.Status is not progress.Status.Done)
+{
+    <div class="progress"></div>
+}
+
 @code{
+
     protected override Task OnInitializedAsync()
     {
+        var Config = this.Progress.Config("MainLayOut.OnInitializedAsync", progress.Status.Install);
         this.Device.NetworkChange += () => this.InvokeAsync(this.StateHasChanged);
         this.Device.Ready += () => this.InvokeAsync(this.StateHasChanged);
+        this.Progress.Change += () => this.InvokeAsync(this.StateHasChanged);
+        Config.Status = progress.Status.Done;
         return base.OnInitializedAsync();
     }
 }
