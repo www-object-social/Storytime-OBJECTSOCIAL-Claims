@@ -1,10 +1,20 @@
 ﻿using Foundation;
+using UIKit;
 
-namespace OBJECTSOCIALMAUIClient
+namespace OBJECTSOCIALMAUIClient;
+
+[Register("AppDelegate")]
+public class AppDelegate : MauiUIApplicationDelegate
 {
-    [Register("AppDelegate")]
-    public class AppDelegate : MauiUIApplicationDelegate
+    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+    public AppDelegate()
     {
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+
+    }
+    public override void OnActivated(UIApplication application)
+    {
+        this.Window.WindowScene.Titlebar.TitleVisibility = UITitlebarTitleVisibility.Hidden;
+
+        base.OnActivated(application);
     }
 }

@@ -8,5 +8,5 @@ namespace Shared;
 public interface IDevice
 {
     public string ISO639_1 { get; }
-
+    public Standard.device.Software Software { get; }
 }
