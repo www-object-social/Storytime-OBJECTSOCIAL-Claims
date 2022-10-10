@@ -13,6 +13,7 @@ namespace Shared
             //services.AddScoped<Terminal>()  
             //services.AddScoped<IDevice>()
             services.AddScoped<Progress>();
+            services.AddScoped<Services>();
         }
     }
 }
