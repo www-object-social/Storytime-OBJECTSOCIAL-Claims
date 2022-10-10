@@ -11,8 +11,7 @@ namespace ClaimsMAUIClient
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>().UseMauiCommunityToolkit();
+            builder.UseMauiApp<App>().UseMauiCommunityToolkit();
 
             builder.Services.AddMauiBlazorWebView();
             builder.Services.Claims(Standard.terminal.Software.ClaimsSoftware);

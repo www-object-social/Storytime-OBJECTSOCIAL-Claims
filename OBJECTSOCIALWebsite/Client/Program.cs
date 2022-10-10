@@ -9,6 +9,6 @@ builder.RootComponents.Add<App>("main");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.Shared();
 builder.Services.OnlyForWebsiteClient();
-builder.Services.OBJECTSOCIAL(Standart.terminal.Software.OBJECTSOCIALWebsite);
+builder.Services.OBJECTSOCIAL(Standard.terminal.Software.OBJECTSOCIALWebsite);
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 await builder.Build().RunAsync();
