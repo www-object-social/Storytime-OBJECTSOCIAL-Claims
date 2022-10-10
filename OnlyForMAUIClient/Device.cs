@@ -11,9 +11,10 @@ class Device : DoNotUseThisFile_Device
             this.Online();
         else
             this.Offline();
+        this.OK();
     }
 
-    public override Standard.device.Software Software =>
+    public override Standard.device.Software Software { get=>
 #if ANDROID
         Standard.device.Software.Android;
 #elif WINDOWS
@@ -23,4 +24,6 @@ class Device : DoNotUseThisFile_Device
 #else
         Standard.device.Software.iOS;
 #endif
+
+        set { } }
 }

@@ -11,28 +11,33 @@ namespace OnlyForWebsiteClient;
 class Device : Shared.DoNotUseThisFile_Device, IAsyncDisposable
 {
     private DotNetObjectReference<Device> DotNetObjectRef = null!;
-    private Standard.device.Software _Software = Standard.device.Software.Unknown;
+
     private IJSObjectReference JSObject { get; set; } = null!;
-    public override Standard.device.Software Software => _Software;
-    public Device(IJSRuntime jSRuntime):base(Network.Online) => _ = TaskDevice(jSRuntime);
+    public override Standard.device.Software Software { get; set; }
+    public Device(IJSRuntime jSRuntime):base(Network.Online) => _ = TaskDevice(jSRuntime).ConfigureAwait(true);
     private async Task TaskDevice(IJSRuntime jSRuntime)
     {
-        JSObject = await jSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/OnlyForWebsiteClient/Device.js");
+        JSObject = await jSRuntime.InvokeAsync<IJSObjectReference>("import", "/_content/OnlyForWebsiteClient/Device.js");
+    
+        
         var UA = await JSObject.InvokeAsync<string>("GetUA");
         if (UA.ToLower().Contains(" firefox/"))
-            _Software = Standard.device.Software.Firefox;
+            Software = Standard.device.Software.Firefox;
         else if (UA.ToLower().Contains(" opr/"))
-            _Software = Standard.device.Software.Oprea;
+            Software = Standard.device.Software.Oprea;
         else if (UA.ToLower().Contains(" edg/"))
-            _Software = Standard.device.Software.Edge;
+            Software = Standard.device.Software.Edge;
         else if (UA.ToLower().Contains(" chrome/"))
-            _Software = Standard.device.Software.Chrome;
+            Software = Standard.device.Software.Chrome;
         else if (UA.ToLower().Contains(" safari/"))
-            _Software = Standard.device.Software.Safari;
+            Software = Standard.device.Software.Safari;
+        else
+            Software = Standard.device.Software.Unknown;
         if (await JSObject.InvokeAsync<bool>("GetNetwork", this.DotNetObjectRef = DotNetObjectReference.Create(this)))
             this.Online();
         else
             this.Offline();
+        this.OK();
     }
     [JSInvokable]
     public override void Online() => base.Online();

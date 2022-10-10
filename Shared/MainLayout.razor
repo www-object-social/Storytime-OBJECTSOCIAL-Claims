@@ -1,2 +1,15 @@
 ﻿@inherits LayoutComponentBase
 @Body
+
+@if (this.Device.Network is Standard.device.Network.Offline)
+{
+    <object data="/_content/Shared/sad-cloud.svg" class="sad-cloud" />
+}
+@code{
+    protected override Task OnInitializedAsync()
+    {
+        this.Device.NetworkChange += () => this.InvokeAsync(this.StateHasChanged);
+        this.Device.Ready += () => this.InvokeAsync(this.StateHasChanged);
+        return base.OnInitializedAsync();
+    }
+}
