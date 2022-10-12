@@ -8,4 +8,5 @@ public class Terminal
 {
     public Standard.terminal.Entrance Entrance { get; init; }
     public Standard.terminal.Software Software { get; init; }
+    public bool IsPreview { get; init; }
 }

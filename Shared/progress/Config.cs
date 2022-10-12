@@ -15,7 +15,7 @@ namespace Shared.progress
             add=>ActionChange += value;
             remove => ActionChange -= value;
         }
-        public progress.Status Status {
+        internal progress.Status Status {
             get => _Status;
             set
             {

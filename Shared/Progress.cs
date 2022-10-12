@@ -9,8 +9,8 @@ namespace Shared
     class Progress
     {
         private readonly IDevice Device;
-        public progress.Status _Status = progress.Status.StartUp;
-        public progress.Status Status {
+        internal progress.Status _Status = progress.Status.StartUp;
+        internal progress.Status Status {
             get => _Status;
             set {
                 if (_Status == value) return;
@@ -24,7 +24,7 @@ namespace Shared
             remove => ActionChange -= value;
         }
         private List<progress.Config> Configs=new List<progress.Config>();
-        public progress.Config Config(string name, progress.Status status) {
+        internal progress.Config Config(string name, progress.Status status) {
             if (this.Configs.Any(x => x.Name == name))
                 return this.Configs.Single(x => x.Name == name);
             var config = new progress.Config(Device, name, status);

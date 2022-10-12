@@ -6,7 +6,8 @@ public static class Dependency
         services.AddScoped(x => new Shared.Terminal
         {
             Entrance = Standard.terminal.Entrance.Business,
-            Software = software
+            Software = software, 
+            IsPreview = true
         });
     }
 }
