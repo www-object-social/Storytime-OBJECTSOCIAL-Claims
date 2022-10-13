@@ -15,7 +15,12 @@ class Services
     private HubConnection _Hub = null!;
     private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl($"{Domain}/os-and-claims-backstage").WithAutomaticReconnect().Build();
     private readonly IDevice Device;
-    private readonly Terminal Terminal; 
+    private readonly Terminal Terminal;
+    private Action ActionChange = null!;
+    public event Action Change {
+        add => ActionChange -= value;
+        remove => ActionChange += value;
+    }
     public Services(Terminal terminal,IDevice device,Progress progress) {
         this.Terminal = terminal;
         this.Config = progress.Config("Services", Shared.progress.Status.Install);
@@ -26,13 +31,23 @@ class Services
     private async void Services_NetworkChange()
     {
         this.Config.Install();
-        if (this.Device.Network is Standard.device.Network.Online && this.Hub.State is HubConnectionState.Disconnected)
+        if (this.Device.Network is Standard.device.Network.Online && this.Hub.State is HubConnectionState.Disconnected) {
             await Hub.StartAsync();
+        }
         if (this.Hub.State is not HubConnectionState.Disconnected)
             this.Config.Done();
+        this.ActionChange?.Invoke();
     }
 
 
-    private void DeviceAuthentication() { }
-   
+    private void ServicesAuthenticationVerfiy() {
+        this.Hub.InvokeAsync<object>("ServicesAuthenticationVerfiy", this.Terminal.Entrance, this.Device.ISO639_1, this.Device.Software, "");
+    }
+    private void ServicesAuthenticationCreate()
+    {
+
+
+    }
+
+
 }
