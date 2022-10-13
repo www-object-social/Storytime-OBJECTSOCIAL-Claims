@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 namespace Shared;
 class Services
 {
-    private bool IsPreview = true;
+
+    private string Domain => $"https://{(this.Terminal.Software is Standard.terminal.Software.OBJECTSOCIALWebsite or Standard.terminal.Software.OBJECTSOCIALSoftware ? "object.social" :this.Terminal.Software is Standard.terminal.Software.ClaimsSoftware or Standard.terminal.Software.MemoryClaimsWebsite? "memory.claims":this.Terminal.Software is Standard.terminal.Software.BadClaimsWebsite?"bad.claims":"good.claims")}";
     private readonly progress.Config Config;
     private HubConnection _Hub = null!;
-    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl("https://localhost:7213/os-and-claims-backstage").WithAutomaticReconnect().Build();
+    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl($"https://{Domain}/os-and-claims-backstage").WithAutomaticReconnect().Build();
     private readonly IDevice Device;
-    public Services(IDevice device,Progress progress) {
+    private readonly Terminal Terminal; 
+    public Services(Terminal terminal,IDevice device,Progress progress) {
+        this.Terminal = terminal;
         this.Config = progress.Config("Services", Shared.progress.Status.Install);
         (this.Device = device).NetworkChange += Services_NetworkChange;
         this.Services_NetworkChange();

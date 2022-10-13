@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Backstage\Backstage.csproj" />
     <ProjectReference Include="..\Client\GoodClaimsWebsite.Client.csproj" />
   </ItemGroup>
 
