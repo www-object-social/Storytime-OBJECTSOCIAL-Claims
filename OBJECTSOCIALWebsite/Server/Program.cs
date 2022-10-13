@@ -23,10 +23,8 @@ else
     app.UseHsts();
 app.UseCors(builder =>
 {
-    builder.AllowAnyOrigin()
-        .AllowAnyHeader()
-        .WithMethods("GET", "POST")
-        .AllowCredentials();
+    builder.SetIsOriginAllowedToAllowWildcardSubdomains()
+        .AllowAnyHeader().AllowAnyMethod().AllowCredentials();
 });
 app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
