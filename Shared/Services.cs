@@ -13,7 +13,7 @@ class Services
     private string Domain => $"https://{(this.Terminal.Software is Standard.terminal.Software.OBJECTSOCIALWebsite or Standard.terminal.Software.OBJECTSOCIALSoftware ? "object.social" :this.Terminal.Software is Standard.terminal.Software.ClaimsSoftware or Standard.terminal.Software.MemoryClaimsWebsite? "memory.claims":this.Terminal.Software is Standard.terminal.Software.BadClaimsWebsite?"bad.claims":"good.claims")}";
     private readonly progress.Config Config;
     private HubConnection _Hub = null!;
-    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl($"https://{Domain}/os-and-claims-backstage").WithAutomaticReconnect().Build();
+    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl($"{Domain}/os-and-claims-backstage").WithAutomaticReconnect().Build();
     private readonly IDevice Device;
     private readonly Terminal Terminal; 
     public Services(Terminal terminal,IDevice device,Progress progress) {
@@ -27,16 +27,12 @@ class Services
     {
         this.Config.Install();
         if (this.Device.Network is Standard.device.Network.Online && this.Hub.State is HubConnectionState.Disconnected)
-        {
             await Hub.StartAsync();
-            if (this.Hub.State is HubConnectionState.Connected)
-                Device.Console("Signalr Connected");
-            else
-                Device.Console("Signalr not Connected");
-        }
         if (this.Hub.State is not HubConnectionState.Disconnected)
             this.Config.Done();
     }
+
+
     private void DeviceAuthentication() { }
    
 }
