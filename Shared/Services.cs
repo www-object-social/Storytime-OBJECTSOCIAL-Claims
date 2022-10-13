@@ -28,6 +28,8 @@ class Services
             await Hub.StartAsync();
             if (this.Hub.State is HubConnectionState.Connected)
                 Device.Console("Signalr Connected");
+            else
+                Device.Console("Signalr not Connected");
         }
         if (this.Hub.State is not HubConnectionState.Disconnected)
             this.Config.Done();
