@@ -12,9 +12,7 @@ class Services
     private bool IsPreview = true;
     private readonly progress.Config Config;
     private HubConnection _Hub = null!;
-    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl(
-        IsPreview ? "https://preview.object.social/os-and-claims-backstage" :
-        "https://object.social/os-and-claims-backstage").WithAutomaticReconnect().Build();
+    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl("https://object.social/os-and-claims-backstage").WithAutomaticReconnect().Build();
     private readonly IDevice Device;
     public Services(IDevice device,Progress progress) {
         this.Config = progress.Config("Services", Shared.progress.Status.Install);
@@ -25,9 +23,15 @@ class Services
     private async void Services_NetworkChange()
     {
         this.Config.Install();
-        if (this.Device.Network is Standard.device.Network.Online&&this.Hub.State is HubConnectionState.Disconnected)
+        if (this.Device.Network is Standard.device.Network.Online && this.Hub.State is HubConnectionState.Disconnected)
+        {
             await Hub.StartAsync();
+            if (this.Hub.State is HubConnectionState.Connected)
+                Device.Console("Signalr Connected");
+        }
         if (this.Hub.State is not HubConnectionState.Disconnected)
             this.Config.Done();
     }
+    private void DeviceAuthentication() { }
+    private void 
 }

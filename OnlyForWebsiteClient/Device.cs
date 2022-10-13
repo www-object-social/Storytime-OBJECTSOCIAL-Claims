@@ -48,4 +48,9 @@ class Device : Shared.DoNotUseThisFile_Device, IAsyncDisposable
         await JSObject.DisposeAsync();
         DotNetObjectRef.Dispose();
     }
+
+    public override async void Console(string message)
+    {
+        await JSObject.InvokeVoidAsync("Console",message);
+    }
 }

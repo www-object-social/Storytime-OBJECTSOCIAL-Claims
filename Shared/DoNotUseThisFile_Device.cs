@@ -35,6 +35,9 @@ public abstract class DoNotUseThisFile_Device:IDevice
         this.IsReady = true;
         this.ActionReady?.Invoke();
     }
+
+    public abstract void Console(object message);
+
     public event Action NetworkChange
     {
         add => ActionNetworkChange += value;

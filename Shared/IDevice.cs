@@ -13,4 +13,5 @@ public interface IDevice
     public event Action Ready;
     public bool IsReady { get; set; }
     public Standard.device.Network Network { get; }
+    public void Console(object message);
 }

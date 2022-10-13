@@ -14,6 +14,11 @@ class Device : DoNotUseThisFile_Device
         this.OK();
     }
 
+    public override void Console(object message)
+    {
+      
+    }
+
     public override Standard.device.Software Software { get=>
 #if ANDROID
         Standard.device.Software.Android;
