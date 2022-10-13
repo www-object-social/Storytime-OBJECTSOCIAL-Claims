@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
 builder.Services.AddSignalR();
 builder.Services.AddResponseCompression(opts =>
 {
@@ -20,7 +21,13 @@ if (app.Environment.IsDevelopment())
     app.UseWebAssemblyDebugging();
 else
     app.UseHsts();
-
+app.UseCors(builder =>
+{
+    builder.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .WithMethods("GET", "POST")
+        .AllowCredentials();
+});
 app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
