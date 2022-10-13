@@ -12,7 +12,7 @@ class Services
     private bool IsPreview = true;
     private readonly progress.Config Config;
     private HubConnection _Hub = null!;
-    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl("https://object.social/os-and-claims-backstage").WithAutomaticReconnect().Build();
+    private HubConnection Hub => _Hub ??= new HubConnectionBuilder().WithUrl("https://localhost:7213/os-and-claims-backstage").WithAutomaticReconnect().Build();
     private readonly IDevice Device;
     public Services(IDevice device,Progress progress) {
         this.Config = progress.Config("Services", Shared.progress.Status.Install);
